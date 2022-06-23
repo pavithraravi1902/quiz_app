@@ -12,6 +12,9 @@ export class QuestionComponent implements OnInit {
   public currentQuestion: number = 0;
   public points: number = 0;
   public counter: number = 60;
+  public correctAnswer: number = 0;
+  public incorrectAns: number = 0;
+  public progress: string = "0";
   constructor(private service: QuestionService) { }
 
   ngOnInit(): void {
@@ -21,6 +24,7 @@ export class QuestionComponent implements OnInit {
   getAllQuestions() {
     this.service.getQuestionJson().subscribe(res => {
       this.questionList = res.questions
+      console.log(this.questionList[0]);
     })
   }
   nextQuestion() {
@@ -29,5 +33,24 @@ export class QuestionComponent implements OnInit {
   previousQuestion() {
     this.currentQuestion--;
   }
-
+  answer(CurrentQno: number, option: any): any {
+    if (option.correct && this.currentQuestion < 10) {
+      this.points += 10;
+      this.currentQuestion++;
+      this.correctAnswer++;
+      this.getProgress();
+    } else {
+      this.currentQuestion++;
+      this.incorrectAns++;
+    }
+  }
+  getProgress() {
+    this.progress = ((this.correctAnswer / this.questionList.length) * 100).toString();
+    return this.progress;
+}
+  refresh() {
+    this.currentQuestion = 0;
+    this.progress = "0";
+    this.points = 0;
+  }
 }

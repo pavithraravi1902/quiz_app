@@ -1,162 +1,172 @@
 {
-    "questions": [{
-            "questionText": "Which of the following does TypeScript use to specify types?",
-            "options": [{
-                    "text": ":",
+    "questions": [
+        {
+            "questionText": "What is the study of blood in biology?",
+            "options": [
+                {
+                    "text": "Haematology",
                     "correct": true
                 },
                 {
-                    "text": ";"
+                    "text": "Mycology"
                 },
                 {
-                    "text": "!"
+                    "text": "Cosmetology"
                 },
                 {
-                    "text": "&"
+                    "text": "Opthalmology"
                 }
             ],
             "explanation": "TS uses a colon (:) to separate the property name from the property type"
         },
         {
-            "questionText": "Which of the following is NOT a type used in TypeScript?",
-            "options": [{
-                    "text": "number"
+            "questionText": "What is called the study of Liver?",
+            "options": [
+                {
+                    "text": "Philology"
                 },
                 {
-                    "text": "string"
+                    "text": "Palynology"
                 },
                 {
-                    "text": "boolean"
+                    "text": "Aerology"
                 },
                 {
-                    "text": "enum",
+                    "text": "Hapetology",
                     "correct": true
                 }
             ],
-            "explanation": "enum is not used as a type in TypeScript"
+            "explanation": "What is the study of blood in biology?"
         },
         {
-            "questionText": "How can we specify properties and methods for an object in TypeScript?",
-            "options": [{
-                    "text": "Use classes."
+            "questionText": "What is the study of Kidney in biology?",
+            "options": [
+                {
+                    "text": "Geology"
                 },
                 {
-                    "text": "Use interfaces.",
+                    "text": "Nephrology",
                     "correct": true
                 },
                 {
-                    "text": "Use enums."
+                    "text": "Oology"
                 },
                 {
-                    "text": "Use async/await."
+                    "text": "Mycology"
                 }
             ],
             "explanation": "interfaces are typically used to list the properties and methods for an object"
         },
         {
-            "questionText": "How else can Array<number> be written in TypeScript?",
-            "options": [{
-                    "text": "@number"
+            "questionText": "What is the study of Dream in biology?",
+            "options": [
+                {
+                    "text": "Trichology"
                 },
                 {
-                    "text": "number[]",
+                    "text": "Oneirology",
                     "correct": true
                 },
                 {
-                    "text": "number!"
+                    "text": "Entomology"
                 },
                 {
-                    "text": "number?"
+                    "text": "Hapetology"
                 }
             ],
-            "explanation": "number[] is another way of writing Array<number> in TypeScript"
+            "explanation": "What is the study of blood in biology?"
         },
         {
-            "questionText": "In which of these does a class take parameters?",
-            "options": [{
-                    "text": "constructor",
+            "questionText": "What is the study of Bones in biology?",
+            "options": [
+                {
+                    "text": "Osteology",
                     "correct": true
                 },
                 {
-                    "text": "destructor"
+                    "text": "Oology"
                 },
                 {
-                    "text": "import"
+                    "text": "Cardiology"
                 },
                 {
-                    "text": "subscribe"
+                    "text": "Geology"
                 }
             ],
             "explanation": "a constructor is used by a class to take in parameters"
         },
         {
-            "questionText": "Which is NOT an access modifier?",
-            "options": [{
-                    "text": "private"
+            "questionText": "What is the study of Heart in biology?",
+            "options": [
+                {
+                    "text": "Philogy"
                 },
                 {
-                    "text": "protected"
+                    "text": "Virology"
                 },
                 {
-                    "text": "public"
+                    "text": "Pomology"
                 },
                 {
-                    "text": "async",
+                    "text": "Cardiology",
                     "correct": true
                 }
             ],
             "explanation": "async is not used as an access modifier type in TypeScript"
         },
         {
-            "questionText": "Which keyword allows us to share information between files in TypeScript?",
-            "options": [{
-                    "text": "import"
+            "questionText": "What is the study of Nails in biology?",
+            "options": [
+                {
+                    "text": "Aerology"
                 },
                 {
-                    "text": "export",
+                    "text": "Cosmetology",
                     "correct": true
                 },
                 {
-                    "text": "async"
+                    "text": "Phycology"
                 },
                 {
-                    "text": "constructor"
+                    "text": "Hapetology"
                 }
             ],
             "explanation": "the export keyword allows for the information to be transmitted between files"
         },
         {
-            "questionText": "Which is an array method to generate a new array based on a condition?",
-            "options": [{
-                    "text": "filter",
+            "questionText": "What is the study of Insects in biology?",
+            "options": [
+                {
+                    "text": "Entomology",
                     "correct": true
                 },
                 {
-                    "text": "map"
+                    "text": "Nephrology"
                 },
                 {
-                    "text": "async"
+                    "text": "Aerology"
                 },
                 {
-                    "text": "enum"
+                    "text": "Philology"
                 }
             ],
             "explanation": "filter is a method used to conditionally create a new array"
         },
         {
-            "questionText": "How is a property accessible within a class?",
-            "options": [{
-                    "text": "Using this.propertyName",
+            "questionText": "What is the study of Hair in biology?",
+            "options": [
+                {
+                    "text": "Trichology",
                     "correct": true
                 },
                 {
-                    "text": "Accessors"
+                    "text": "Virology"
                 },
                 {
-                    "text": "Destructuring"
+                    "text": "Haematology"
                 },
                 {
-                    "text": "Arrow function"
+                    "text": "Palynology"
                 }
             ],
             "explanation": "this.propertyName is the way to access a specific property within a class"
