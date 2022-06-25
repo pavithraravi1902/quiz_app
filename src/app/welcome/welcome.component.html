@@ -4,12 +4,15 @@
     <h4>Rules:</h4>
     <ol>
         <li>Correct answer gives 10 points</li>
-        <li>Incorrect answer gives -10 points</li>
+        <li>Incorrect answer gives 0 points</li>
     </ol>
     <h1 style="font-family:cursive; text-align:center">All the best!</h1>
-    <div class="name col-md-4 my-3">
-        Enter your name:
-        <input type="text" #name class="form-control" required>
-    </div>
-    <button class="btn btn-primary btn-lg" routerLink="/question" (click)="startQuiz()">Start the quiz!!</button>
+    <form>
+        <div class="name col-md-4 my-3">
+            Enter your name:
+            <input type="text" #name class="form-control">
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg" routerLink="/question" (click)="startQuiz()">Start the
+            quiz!!</button>
+    </form>
 </div>

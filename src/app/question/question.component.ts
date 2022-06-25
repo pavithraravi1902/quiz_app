@@ -9,6 +9,7 @@ import { QuestionService } from '../service/question.service';
 export class QuestionComponent implements OnInit {
   public name: string = "";
   public questionList: any = [];
+  public answeredQuestion: any=[];
   public currentQuestion: number = 0;
   public points: number = 0;
   public counter: number = 60;
@@ -38,6 +39,7 @@ export class QuestionComponent implements OnInit {
       this.points += 10;
       this.currentQuestion++;
       this.correctAnswer++;
+
       this.getProgress();
     } else {
       this.currentQuestion++;
