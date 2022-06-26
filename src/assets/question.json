@@ -1,6 +1,6 @@
 {
     "questions": [
-        {
+        {"id": 1,
             "questionText": "What is the study of blood in biology?",
             "options": [
                 {
@@ -19,7 +19,7 @@
             ],
             "explanation": "TS uses a colon (:) to separate the property name from the property type"
         },
-        {
+        {"id": 2,
             "questionText": "What is called the study of Liver?",
             "options": [
                 {
@@ -38,7 +38,7 @@
             ],
             "explanation": "What is the study of blood in biology?"
         },
-        {
+        {"id": 3,
             "questionText": "What is the study of Kidney in biology?",
             "options": [
                 {
@@ -57,7 +57,7 @@
             ],
             "explanation": "interfaces are typically used to list the properties and methods for an object"
         },
-        {
+        {"id": 4,
             "questionText": "What is the study of Dream in biology?",
             "options": [
                 {
@@ -76,7 +76,7 @@
             ],
             "explanation": "What is the study of blood in biology?"
         },
-        {
+        {"id": 5,
             "questionText": "What is the study of Bones in biology?",
             "options": [
                 {
@@ -95,7 +95,7 @@
             ],
             "explanation": "a constructor is used by a class to take in parameters"
         },
-        {
+        {"id": 6,
             "questionText": "What is the study of Heart in biology?",
             "options": [
                 {
@@ -114,7 +114,7 @@
             ],
             "explanation": "async is not used as an access modifier type in TypeScript"
         },
-        {
+        {"id": 7,
             "questionText": "What is the study of Nails in biology?",
             "options": [
                 {
@@ -133,7 +133,7 @@
             ],
             "explanation": "the export keyword allows for the information to be transmitted between files"
         },
-        {
+        {"id": 8,
             "questionText": "What is the study of Insects in biology?",
             "options": [
                 {
@@ -152,7 +152,7 @@
             ],
             "explanation": "filter is a method used to conditionally create a new array"
         },
-        {
+        {"id": 9,
             "questionText": "What is the study of Hair in biology?",
             "options": [
                 {
