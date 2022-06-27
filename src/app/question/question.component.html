@@ -18,8 +18,8 @@
                     <h5> Question {{currentQuestion }} of {{questionList.length}} </h5>
                 </span>
             </div>
-            <div class="timer">
-                <h5>{{counter}} sec</h5>
+            <div class="timer" (click)="myTimer">
+                <h5>{{counter}} sec </h5>
             </div>
         </div>
         <div class="progress mb-3">
@@ -46,7 +46,8 @@
             <button class="btn" (click)="refresh()"><i class="fa fa-refresh fa-1x" aria-hidden="true"></i></button>
             <button [disabled]="currentQuestion ===0" (click)="previousQuestion()" class="btn"><i
                     class="fa fa-chevron-left fa-1x" aria-hidden="true"></i></button>
-            <button [disabled]="currentQuestion < 8" (click)="startQuiz()" routerLink="/thank-you">Submit</button>
+            <button [disabled]="currentQuestion < 8" routerLink="/thank-you">Submit</button>
         </div>
     </div>
+    <app-thank-you [correctAnswer]="correctAnswer"> </app-thank-you>
 </div>

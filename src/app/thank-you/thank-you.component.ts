@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-thank-you',
@@ -6,12 +6,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./thank-you.component.scss']
 })
 export class ThankYouComponent implements OnInit {
-  public correctAnswer: number=0;
-  constructor() { }
+  @Input() correctAnswer: any;
+  
+  constructor() {
+    console.log(this.correctAnswer);
+   }
 
   ngOnInit(): void {
-    this.correctAnswer = Number(localStorage.getItem("correctAnswer")!);
-  console.log(this.correctAnswer);
+   
   }
 
 }

@@ -1,6 +1,7 @@
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
 import { QuestionService } from '../service/question.service';
 import { ActivatedRoute, Router } from '@angular/router';
+//import { countReset } from 'console';
 
 export type Question = {
   id: number;
@@ -22,18 +23,21 @@ export class QuestionComponent implements OnInit {
   public answeredQuestion: any = [];
   public currentQuestion: number = 0;
   public points: number = 0;
-  public counter: number = 60;
   public correctAnswer: number = 0;
   public incorrectAns: number = 0;
   public progress: string = "0";
   public istrue: any = null;
-  @ViewChild('correctAnswer') nameKey!: ElementRef;
+  public counter: number = 60
+  public time: any;
+
   constructor(private service: QuestionService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
     this.name = localStorage.getItem("name")!;
     this.getAllQuestions();
-
+    this.myTimer();
+    this.time = setInterval(() => this.myTimer(), 1000);
+    //console.log("timer",this.time);
   }
   getAllQuestions() {
     this.service.getQuestionJson().subscribe(res => {
@@ -85,8 +89,15 @@ export class QuestionComponent implements OnInit {
       this.router.navigate(["thank-you"])
     }
   }
-  startQuiz() {
-    localStorage.setItem("correctAnswer", this.nameKey.nativeElement.value);
-  }
 
+  myTimer() {
+    if (this.currentQuestion < 9) {
+      this.counter + "sec left";
+      this.counter--;
+      if (this.counter == -1) {
+        clearInterval(this.time);
+        alert("Time out!! :(");
+      };
+    }
+  }
 }
