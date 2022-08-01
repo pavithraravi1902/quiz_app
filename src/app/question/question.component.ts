@@ -37,7 +37,7 @@ export class QuestionComponent implements OnInit {
     this.getAllQuestions();
     this.myTimer();
     this.time = setInterval(() => this.myTimer(), 1000);
-    //console.log("timer",this.time);
+    console.log(this.correctAnswer);
   }
   getAllQuestions() {
     this.service.getQuestionJson().subscribe(res => {
