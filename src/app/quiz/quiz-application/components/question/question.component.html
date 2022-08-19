@@ -46,7 +46,7 @@
             <button class="btn" (click)="refresh()"><i class="fa fa-refresh fa-1x" aria-hidden="true"></i></button>
             <button [disabled]="currentQuestion ===0" (click)="previousQuestion()" class="btn"><i
                     class="fa fa-chevron-left fa-1x" aria-hidden="true"></i></button>
-            <button [disabled]="currentQuestion < 8" routerLink="/thank-you">Submit</button>
+            <!--<button [disabled]="currentQuestion < 8" routerLink="/thank-you">Submit</button> -->
         </div>
     </div>
     <app-thank-you [correctAnswer]="correctAnswer"> </app-thank-you>
