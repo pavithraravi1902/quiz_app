@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, AfterViewInit } from '@angular/core';
-import { QuestionService } from '../service/question.service';
+import { QuestionService } from '../../service/question.service';
 import { ActivatedRoute, Router } from '@angular/router';
 //import { countReset } from 'console';
 

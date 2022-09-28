@@ -7,13 +7,13 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class ThankYouComponent implements OnInit {
   @Input() correctAnswer: any;
-  
+
   constructor() {
     console.log(this.correctAnswer);
-   }
+  }
 
   ngOnInit(): void {
-   
+
   }
 
 }
