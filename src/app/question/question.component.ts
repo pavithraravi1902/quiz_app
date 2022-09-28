@@ -33,16 +33,14 @@ export class QuestionComponent implements OnInit {
   constructor(private service: QuestionService, private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
-    this.name = localStorage.getItem("name")!;
+    this.name = localStorage.getItem("inputName")!;
     this.getAllQuestions();
     this.myTimer();
     this.time = setInterval(() => this.myTimer(), 1000);
-    console.log(this.correctAnswer);
   }
   getAllQuestions() {
     this.service.getQuestionJson().subscribe(res => {
       this.questionList = res.questions
-      // console.log(this.questionList[0]);
     })
   }
   nextQuestion() {
@@ -57,7 +55,6 @@ export class QuestionComponent implements OnInit {
     } else if (!option.correct) {
       this.istrue = false;
     }
-    //console.log(this.istrue);
   }
   answer(CurrentQno: number, option: any): any {
     if (this.currentQuestion <= 8) {
@@ -65,6 +62,12 @@ export class QuestionComponent implements OnInit {
         this.points += 10;
         this.currentQuestion++;
         this.correctAnswer++;
+        if(this.currentQuestion == 9){
+          console.log(this.currentQuestion);
+          alert("Completed");
+          this.router.navigate(["thank-you"]);
+        }
+      
 
         this.getProgress();
         // console.log(this.correctAnswer);
@@ -83,11 +86,7 @@ export class QuestionComponent implements OnInit {
     this.currentQuestion = 0;
     this.progress = "0";
     this.points = 0;
-  }
-  navigate() {
-    if (this.currentQuestion > 9) {
-      this.router.navigate(["thank-you"])
-    }
+    this.counter = 0;
   }
 
   myTimer() {

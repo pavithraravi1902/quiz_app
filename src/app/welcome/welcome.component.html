@@ -8,14 +8,13 @@
     </ol>
     <h1 style="font-family:cursive; text-align:center">All the best!</h1>
     <form>
-        <div class="name col-md-4 my-3">
-            Enter your name:
-            <input type="text" [(ngModel)]="inputName" required #name="ngModel" class="form-control">
-            <div *ngIf="name.touched && name.invalid">
-                Name required.
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary btn-lg" routerLink="/question" (click)="startQuiz()">Start the
-            quiz!!</button>
+    <div class="name col-md-4 my-3">
+        Enter your name:
+        <input type="text" required class="form-control"/>
+    </div>
+    <button type="submit" class="btn btn-primary btn-lg" routerLink="/question" (click)="startQuiz(); onClick()">Start
+        the
+        quiz!!</button>
     </form>
 </div>
+  
